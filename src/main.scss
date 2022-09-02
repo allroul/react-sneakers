@@ -303,7 +303,7 @@ li {
   left: 0;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 450ms ease;
+  transition: all 450ms ease;
   z-index: 1;
 
   &__content {
@@ -316,6 +316,7 @@ li {
     transform: translateX(100%);
     background-color: #fff;
     box-shadow: -1px 0 15px 0 rgba(#000, 20%);
+    transition: transform 450ms ease;
   }
 
   &.opened {
