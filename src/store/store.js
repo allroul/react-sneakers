@@ -1,7 +1,14 @@
-import { configureStore } from '@reduxjs/toolkit';
+import { configureStore, combineReducers } from "@reduxjs/toolkit";
+import sneakersSlice from "./sneakersSlice";
+import cartSlice from "./cartSlice";
 
-const store = configureStore({
-    sneakers: sneakersReducer
+const rootReducer = combineReducers({
+    sneakers: sneakersSlice,
+    cartStatus: cartSlice
 })
 
-export default store
+
+export default configureStore({
+    reducer: rootReducer
+})
+
