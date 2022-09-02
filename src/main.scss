@@ -1,466 +1,472 @@
-body, p, div, ul, li, span, button, a, h1, h2, h3, h4 {
-    margin: 0;
-    padding: 0;
+body,
+p,
+div,
+ul,
+li,
+span,
+button,
+a,
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-size: 14px;
-    font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
 }
 
 .d-flex {
-    display: flex;
+  display: flex;
 }
 
 button {
-    border: none;
-    outline: none;
-    cursor: pointer;
-    background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
 }
 
 * {
-    font-family: "Inter", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 a {
-    text-decoration: none;
-    color: #000;
+  text-decoration: none;
+  color: #000;
 }
 
-ul, li {
-    list-style-type: none;
+ul,
+li {
+  list-style-type: none;
 }
 
 .layout {
-    background-color: #E7F6FF;
-    padding: 85px;
+  background-color: #e7f6ff;
+  padding: 85px;
 }
 
 .main-content {
-    max-width: 1080px;
-    width: 100%;
-    margin: 0 auto;
-    background-color: #fff;
-    border-radius: 20px;
+  max-width: 1080px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 20px;
 }
 
 .header {
-    padding: 45px 60px;
-    border-bottom: 2px solid #EAEAEA;
+  padding: 45px 60px;
+  border-bottom: 2px solid #eaeaea;
 
-    &__wrapper {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-        &__logo {
-            display: flex;
-            align-items: center;
+    &__logo {
+      display: flex;
+      align-items: center;
 
-            & img {
-                margin-right: 16px;
-            }
+      & img {
+        margin-right: 16px;
+      }
+    }
+
+    &__title {
+      color: #9d9d9d;
+      font-size: 14px;
+      font-weight: 400;
+
+      & span {
+        text-transform: uppercase;
+        color: #000;
+        display: block;
+        font-size: 20px;
+        font-weight: 700;
+      }
+    }
+
+    .header__info {
+      display: flex;
+      align-items: center;
+
+      &__cart {
+        margin-right: 30px;
+
+        button {
+          display: flex;
+          align-items: center;
+          font-weight: 600;
+          color: #5c5c5c;
         }
 
-        &__title {
-            color: #9D9D9D;
-            font-size: 14px;
-            font-weight: 400;
-    
-            & span {
-                text-transform: uppercase;
-                color: #000;
-                display: block;
-                font-size: 20px;
-                font-weight: 700;
-            }
+        & svg {
+          margin-right: 10px;
+
+          path {
+            transition: stroke 0.3s ease;
+          }
         }
 
-        .header__info {
-            display: flex;
-            align-items: center;
-
-            &__cart {
-                margin-right: 30px;               
-
-                button {
-                    display: flex;
-                    align-items: center;
-                    font-weight: 600;
-                    color: #5C5C5C;
-                    
-                }
-
-                & svg {
-                    margin-right: 10px;                   
-
-                    path {
-                        transition: stroke .3s ease;
-                    }
-                }
-
-                &:hover svg path {
-                    stroke: #3CC755
-                }
-
-            }
-
-            &__favorites {
-                margin-right: 30px;
-
-                a {
-                    display: flex;
-                }
-
-                svg path {
-                    transition: fill .3s ease;
-                }
-
-                svg:hover path {
-                    fill: #FF8585;
-                }
-            }
-
-            &__user {
-                a {
-                    display: flex;
-                }
-
-                svg path {
-                    transition: fill .3s ease;
-                }
-
-                &:hover svg path {
-                    fill: #000AFF;
-                }
-            }
+        &:hover svg path {
+          stroke: #3cc755;
         }
-    }    
+      }
+
+      &__favorites {
+        margin-right: 30px;
+
+        a {
+          display: flex;
+        }
+
+        svg path {
+          transition: fill 0.3s ease;
+        }
+
+        svg:hover path {
+          fill: #ff8585;
+        }
+      }
+
+      &__user {
+        a {
+          display: flex;
+        }
+
+        svg path {
+          transition: fill 0.3s ease;
+        }
+
+        &:hover svg path {
+          fill: #000aff;
+        }
+      }
+    }
+  }
 }
 
 .main {
-    padding: 45px 60px;
+  padding: 45px 60px;
 
-    &__title {
-        font-size: 32px;
-    }
+  &__title {
+    font-size: 32px;
+  }
 
-    .sneakers-list {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-gap: 38px;
-        margin-top: 40px;
+  .sneakers-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 38px;
+    margin-top: 40px;
 
-        .sneakers-item {
-            width: 149px;
-            position: relative;
-            padding: 20px 28px 32px;
-            border-radius: 40px;
-            border: 1.5px solid #F3F3F3;
-            transition: box-shadow .3s ease, transform .3s ease;
+    .sneakers-item {
+      width: 149px;
+      position: relative;
+      padding: 20px 28px 32px;
+      border-radius: 40px;
+      border: 1.5px solid #f3f3f3;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
 
-            &:hover {
-                transform: translateY(-10px);
-                box-shadow: 0px 14px 30px 0px #0000000D;
-            }
+      &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0px 14px 30px 0px #0000000d;
+      }
 
-            &__favorites {
-                position: absolute;
-                top: 30px;
-                left: 30px;                
-                width: 32px;
-                height: 32px; 
-            }
+      &__favorites {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        width: 32px;
+        height: 32px;
+      }
 
-            .favorite-wrapper {
-                .favorite-active {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    opacity: 0;
-                    transition: opacity .3s ease;
-                }
-
-                .favorite-unactive {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    transition: opacity .3s ease;
-                }
-            }
-
-            .sneakers-item__img {
-                width: 100%;
-                margin-bottom: 14px;
-                display: block;
-            }
-
-            .sneakers-item__title {
-                font-size: 14px;
-                font-weight: 400;
-                margin-bottom: 14px;
-            }
-
-            .sneakers-item__info {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-
-                .sneakers-item__price {
-                    text-transform: uppercase;
-                    font-weight: 500;
-                    color: #BDBDBD;
-
-                    span {
-                        display: block;
-                        color: #000;
-                        font-weight: 700;
-                        margin-top: 2px;
-                    }
-                }
-
-                .sneakers-item__order {
-                    outline: none;
-                    border: none;
-                    cursor: pointer;
-                }
-
-                .add-to-cart-wrapper {
-                    position: relative;
-                    width: 32px;
-                    height: 32px;
-
-                    &.added .add-to-cart-added {
-                        opacity: 1;
-                    }
-
-                    &.added .add-to-cart-unadded {
-                        opacity: 0;
-                    }
-
-                    .add-to-cart-added {
-                        position: absolute;
-                        right: 0;
-                        bottom: 0;
-                        opacity: 0;
-                        transition: opacity .4s ease;
-                    }
-
-                    .add-to-cart-unadded {
-                        transition: opacity .4s ease;
-                    }
-                }
-                
-            }
+      .favorite-wrapper {
+        .favorite-active {
+          position: absolute;
+          top: 0;
+          left: 0;
+          opacity: 0;
+          transition: opacity 0.3s ease;
         }
-    }
 
-    .main__title__wrapper {
+        .favorite-unactive {
+          position: absolute;
+          top: 0;
+          left: 0;
+          transition: opacity 0.3s ease;
+        }
+      }
+
+      .sneakers-item__img {
+        width: 100%;
+        margin-bottom: 14px;
+        display: block;
+      }
+
+      .sneakers-item__title {
+        font-size: 14px;
+        font-weight: 400;
+        margin-bottom: 14px;
+      }
+
+      .sneakers-item__info {
         display: flex;
         justify-content: space-between;
         align-items: center;
 
-        .main__title__search {
-            max-width: 250px;
-            width: 100%;
-            position: relative;
+        .sneakers-item__price {
+          text-transform: uppercase;
+          font-weight: 500;
+          color: #bdbdbd;
 
-            & img {
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                margin: auto 0;
-                left: 18px;
-            }
-
-            & input {
-                padding: 15px 18px 15px 46px;
-                border-radius: 10px;
-                border: 2px solid #f3f3f3;
-                color: #C4C4C4;
-                outline: none;
-            }
+          span {
+            display: block;
+            color: #000;
+            font-weight: 700;
+            margin-top: 2px;
+          }
         }
+
+        .sneakers-item__order {
+          outline: none;
+          border: none;
+          cursor: pointer;
+        }
+
+        .add-to-cart-wrapper {
+          position: relative;
+          width: 32px;
+          height: 32px;
+
+          &.added .add-to-cart-added {
+            opacity: 1;
+          }
+
+          &.added .add-to-cart-unadded {
+            opacity: 0;
+          }
+
+          .add-to-cart-added {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+          }
+
+          .add-to-cart-unadded {
+            transition: opacity 0.4s ease;
+          }
+        }
+      }
     }
+  }
+
+  .main__title__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .main__title__search {
+      max-width: 250px;
+      width: 100%;
+      position: relative;
+
+      & img {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        left: 18px;
+      }
+
+      & input {
+        padding: 15px 18px 15px 46px;
+        border-radius: 10px;
+        border: 2px solid #f3f3f3;
+        color: #c4c4c4;
+        outline: none;
+      }
+    }
+  }
 }
 
 .cart {
-    position: fixed;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(#000, 80%);
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 450ms ease;
+  z-index: 1;
+
+  &__content {
     width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.8);
-    top: 0;
-    left: 0;
-    z-index: -1;
-    opacity: 0;
-    transition: opacity .4s ease;
+    max-width: 325px;
+    max-height: calc(100vh - 60px);
+    padding: 30px;
+    flex-direction: column;
+    display: flex;
+    transform: translateX(100%);
+    background-color: #fff;
+    box-shadow: -1px 0 15px 0 rgba(#000, 20%);
+    transition: all 0.4s linear;
+  }
 
-    &__content {
-        background-color: #fff;
-        padding: 30px;
-        max-width: 325px;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        max-height: calc(100vh - 60px);
-        transform: translateX(100%);
-        transition: transform .4s ease;
+  &.opened {
+    opacity: 1;
+    visibility: visible;
+
+    .cart__content {
+      transform: translateX(0);
+    }
+  }
+
+  &__body {
+    min-height: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  &__list {
+    margin-top: 30px;
+    flex: 1;
+    overflow: auto;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 20px;
+    border: 2px solid #f3f3f3;
+    padding: 20px;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
     }
 
-
-    &.opened {
-        opacity: 1;
-        z-index: 1;
-
-        .cart__content {
-            transform: translateX(0);
-        }
+    &__img {
+      max-width: 70px;
+      width: 100%;
     }
 
-    &__body {
-        min-height: 100%;
-        display: flex;
-        justify-content: flex-end;
+    &__info {
+      display: flex;
+      flex-direction: column;
+      margin-left: 20px;
+      margin-right: 12px;
     }
-
-    
 
     &__title {
-        font-size: 24px;
-        font-weight: 700;
+      font-size: 14px;
+      font-weight: 400;
+      margin-bottom: 8px;
     }
 
-    &__list {
-        margin-top: 30px;        
+    &__price {
+      font-weight: 700;
+    }
+
+    &__delete {
+      filter: grayscale(100%);
+      transition: filter 0.3s ease;
+
+      &:hover {
+        filter: grayscale(0);
+      }
+    }
+  }
+
+  &__total {
+    margin-top: 30px;
+
+    &__price {
+      justify-content: space-between;
+      margin-bottom: 20px;
+
+      &-dashed {
+        border-bottom: 2px dashed #dfdfdf;
         flex: 1;
-        overflow: auto;
-        -ms-overflow-style: none;
+        position: relative;
+        top: -3px;
+        margin: 0 7px;
+      }
 
-        &::-webkit-scrollbar { width: 0; }
+      &-number {
+        font-weight: 600;
+      }
     }
 
-    
+    &__tax {
+      justify-content: space-between;
+      margin-bottom: 24px;
 
-    &__item {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        border-radius: 20px;
-        border: 2px solid #F3F3F3;
-        padding: 20px;
+      &-dashed {
+        border-bottom: 2px dashed #dfdfdf;
+        flex: 1;
+        position: relative;
+        top: -3px;
+        margin: 0 7px;
+      }
 
-        &:not(:last-child) {
-            margin-bottom: 20px;
-        }
-
-        &__img {
-            max-width: 70px;
-            width: 100%;
-        }
-
-        &__info {
-            display: flex;
-            flex-direction: column;
-            margin-left: 20px;
-            margin-right: 12px;
-        }
-
-        &__title {
-            font-size: 14px;
-            font-weight: 400;
-            margin-bottom: 8px;
-        }
-
-        &__price {
-            font-weight: 700;
-        }
-
-        &__delete {
-            filter: grayscale(100%);
-            transition: filter .3s ease;
-
-            &:hover {
-                filter: grayscale(0);
-            }
-        }
+      &-number {
+        font-weight: 600;
+      }
     }
 
-    &__total {
-        margin-top: 30px;
+    &__submit {
+      width: 100%;
+      border-radius: 18px;
+      background-color: #7fd217;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 18px;
+      color: #fff;
+      border: none;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      position: relative;
+      transition: background-color 0.3s ease;
 
-        &__price {
-            justify-content: space-between;
-            margin-bottom: 20px;
+      &:hover {
+        background-color: #65a811;
+      }
 
-            &-dashed {
-                border-bottom: 2px dashed #DFDFDF;
-                flex: 1;
-                position: relative;
-                top: -3px;
-                margin: 0 7px;
-            }
+      &:active {
+        background-color: darken($color: #65a811, $amount: 10);
+      }
 
-            &-number {
-                font-weight: 600;
-            }
-        }
+      &:hover img {
+        transform: translateX(15px);
+      }
 
-        &__tax {
-            justify-content: space-between;
-            margin-bottom: 24px;
-
-            &-dashed {
-                border-bottom: 2px dashed #DFDFDF;
-                flex: 1;
-                position: relative;
-                top: -3px;
-                margin: 0 7px;
-            }
-
-            &-number {
-                font-weight: 600;
-            }
-        }
-
-        &__submit {
-            width: 100%;
-            border-radius: 18px;
-            background-color: #7FD217;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 18px;
-            color: #fff;
-            border: none;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            position: relative;
-            transition: background-color .3s ease;
-
-            &:hover {
-                background-color: #65A811;
-            }
-
-            &:active {
-                background-color: darken($color: #65A811, $amount: 10);
-            }
-
-            &:hover img {
-                transform: translateX(15px);
-            }
-
-            & img {
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                margin: auto 0;
-                right: 46px;
-                transition: transform .3s ease;
-            }
-        }
-
+      & img {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        right: 46px;
+        transition: transform 0.3s ease;
+      }
     }
+  }
 }
-
