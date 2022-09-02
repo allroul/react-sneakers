@@ -292,14 +292,15 @@ ul, li {
     background-color: rgba(0,0,0,0.8);
     top: 0;
     left: 0;
-    z-index: -1;
+    z-index: 1;
     opacity: 0;
-    transition: opacity .4s ease, z-index .4s ease;
+    visibility: hidden;
+    transition: opacity .4s ease, visibility .4s ease;
 
 
     &.opened {
         opacity: 1;
-        z-index: 1;
+        visibility: visible;
 
         .cart__content {
             transform: translateX(0);
