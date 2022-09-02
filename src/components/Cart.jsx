@@ -11,14 +11,10 @@ const Cart = () => {
 
   return (
     <Transition in={isOpenCart} timeout={350}>
-      {(state) => (
-        <div className={`cart ${state}`}>
-          <div
-            className='cart__body'
-            ref={cartBodyRef}
-            onClick={onCloseCart}
-          >
-            <div className={`cart__content ${state}`}>
+      {(classTransitions) => (
+        <div className={`cart ${classTransitions}`}>
+          <div className='cart__body' ref={cartBodyRef} onClick={onCloseCart}>
+            <div className={`cart__content ${classTransitions}`}>
               <h3 className='cart__title'>Корзина</h3>
               <ul className='cart__list'>
                 {[...Array(10)].map((_, i) => (
