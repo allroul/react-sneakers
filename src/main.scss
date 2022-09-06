@@ -301,10 +301,14 @@ li {
   background-color: rgba(#000, 80%);
   top: 0;
   left: 0;
+  z-index: 1;
   opacity: 0;
   visibility: hidden;
-  transition: all 450ms ease;
-  z-index: 1;
+  transition: all 450ms linear;
+  &.entering { opacity: 1; visibility: visible; }
+  &.entered { opacity: 1; visibility: visible; }
+  &.exiting { opacity: 0; visibility: hidden; }
+  &.exited { opacity: 0; visibility: hidden; }
 
   &__content {
     width: 100%;
@@ -317,15 +321,10 @@ li {
     background-color: #fff;
     box-shadow: -1px 0 15px 0 rgba(#000, 20%);
     transition: transform 450ms ease;
-  }
-
-  &.opened {
-    opacity: 1;
-    visibility: visible;
-
-    .cart__content {
-      transform: translateX(0);
-    }
+    &.entering { transform: translateX(0); }
+    &.entered { transform: translateX(0); }
+    &.exiting { transform: translateX(100%); }
+    &.exited { transform: translateX(100%); }
   }
 
   &__body {
