@@ -50,8 +50,9 @@ li {
 
 .layout {
   background-color: #e7f6ff;
+  box-sizing: border-box;
   padding: 80px 55px;
-  min-height: calc(100vh - 169px);
+  min-height: calc(100vh + 1px);
 
   @media (max-width: 992px) {
     padding: 60px 45px;
