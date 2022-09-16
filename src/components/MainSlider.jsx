@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { useState } from 'react';
 import '../main.scss'
 
@@ -16,7 +15,6 @@ const MainSlider = () => {
     } else if(window.innerWidth <= 576) {
         sliderWidth = 250
     }
-    console.log(sliderWidth)
     const slidesNumber = 4 - 1;
     const maxOffset = -(sliderWidth * slidesNumber);
 
