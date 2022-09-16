@@ -20,7 +20,7 @@ const CartItem = props => {
                 </span>
             </div>
             <button type='button' className='cart__item__delete' onClick={() => deleteItem(props.id)}>
-                <img alt='delete item' src="react-sneakers/img/delete.png" />
+                <img alt='delete item' src="/react-sneakers/img/delete.png" />
             </button>
         </li>
     )

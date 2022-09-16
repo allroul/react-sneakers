@@ -21,7 +21,7 @@ const Favorites = () => {
                     <>
                         <h2 className="main__title">
                             <Link to='/'>
-                                <img src="react-sneakers/img/arrow-back.jpg" className="inner__page__back-btn" alt="arrow back" />
+                                <img src="/react-sneakers/img/arrow-back.jpg" className="inner__page__back-btn" alt="arrow back" />
                             </Link>                    
                             Мои закладки
                         </h2>
@@ -31,7 +31,7 @@ const Favorites = () => {
                     </>                    
                     ) : (
                         <div className='inner__page__empty'>
-                            <img src='react-sneakers/img/favorites-empty.png' alt='upset face'  className='inner__page__empty__face'/>
+                            <img src='/react-sneakers/img/favorites-empty.png' alt='upset face'  className='inner__page__empty__face'/>
                             <h3>
                                 Закладок нет :(
                             </h3>
@@ -41,7 +41,7 @@ const Favorites = () => {
                             <Link to='/'>
                                 <button type='button' className='green-button inner__page__empty__btn'>
                                     Вернуться назад
-                                    <img alt='arrow' src='react-sneakers/img/arrow.png' />
+                                    <img alt='arrow' src='/react-sneakers/img/arrow.png' />
                                 </button>
                             </Link>                            
                         </div>

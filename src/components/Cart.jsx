@@ -62,7 +62,7 @@ const Cart = () => {
       </div>
       <button onClick={() => makeOrder(cartItems)} type='button' className='green-button cart__total__submit'>
         Оформить заказ
-        <img alt='arrow' src='react-sneakers/img/arrow.png' />
+        <img alt='arrow' src='/react-sneakers/img/arrow.png' />
       </button>
     </div>
   )
@@ -75,12 +75,12 @@ const Cart = () => {
             <div className={`cart__content ${classTransitions}`}>
               <h3 className='cart__title'>
                 Корзина
-                <img src='react-sneakers/img/close-cart.png' alt='close cart' onClick={() => dispatch(changeCartStatus(false))} />
+                <img src='/react-sneakers/img/close-cart.png' alt='close cart' onClick={() => dispatch(changeCartStatus(false))} />
               </h3>
               {cartItems.length > 0 ? 
                 (cartList) : orderStatus 
-                ? <CartInfo title='Заказ оформлен!' image='react-sneakers/img/order-completed.jpg' text={`Ваш заказ #${orderNumber} скоро будет передан курьерской доставке`} completed/> 
-                : <CartInfo title='Корзина пустая' image='react-sneakers/img/cart-empty.png' text='Добавьте хотя бы одну пару кроссовок, чтобы сделать заказ.'/>}      
+                ? <CartInfo title='Заказ оформлен!' image='/react-sneakers/img/order-completed.jpg' text={`Ваш заказ #${orderNumber} скоро будет передан курьерской доставке`} completed/> 
+                : <CartInfo title='Корзина пустая' image='/react-sneakers/img/cart-empty.png' text='Добавьте хотя бы одну пару кроссовок, чтобы сделать заказ.'/>}      
               {cartItems.length > 0 ? (cartTotal) : null}                  
             </div>
           </div>

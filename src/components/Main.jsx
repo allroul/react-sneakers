@@ -33,8 +33,8 @@ const Main = () => {
                     </h2>           
                     <div className="main__title__search">
                         <input placeholder="Поиск..." value={searchValue}  onChange={searchOnChange}/>
-                        <img className="search-img" alt="search" src="react-sneakers/img/search.png" />
-                        {searchValue && <img className="clear-search" alt='clear search' src="react-sneakers/img/delete.png"  onClick={() => setsearchValue('')}/>}                            
+                        <img className="search-img" alt="search" src="/react-sneakers/img/search.png" />
+                        {searchValue && <img className="clear-search" alt='clear search' src="/react-sneakers/img/delete.png"  onClick={() => setsearchValue('')}/>}                            
                     </div>         
                 </div>
                 <ul className="sneakers-list">

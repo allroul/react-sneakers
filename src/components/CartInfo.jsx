@@ -16,7 +16,7 @@ const CartInfo = props => {
             </p>
             <button onClick={() => dispatch(changeCartStatus(false))} type='button' className='green-button cart__empty__button'>
                 Вернуться назад
-                <img alt='arrow' src='react-sneakers/img/arrow.png' />
+                <img alt='arrow' src='/react-sneakers/img/arrow.png' />
             </button>
         </div>
     )

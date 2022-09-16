@@ -26,7 +26,7 @@ const Orders = () => {
                     <>
                         <h2 className="main__title">
                             <Link to='/'>
-                                <img src="react-sneakers/img/arrow-back.jpg" className="inner__page__back-btn" alt="arrow back" />
+                                <img src="/react-sneakers/img/arrow-back.jpg" className="inner__page__back-btn" alt="arrow back" />
                             </Link>                    
                             Мои заказы
                         </h2>
@@ -36,7 +36,7 @@ const Orders = () => {
                     </> 
                     ) : (
                         <div className='inner__page__empty'>
-                            <img alt='orders empty' className='inner__page__empty__face' src='react-sneakers/img/orders-empty.jpg' />
+                            <img alt='orders empty' className='inner__page__empty__face' src='/react-sneakers/img/orders-empty.jpg' />
                             <h3>
                                 У вас нет заказов :(
                             </h3>
@@ -47,7 +47,7 @@ const Orders = () => {
                             <Link to='/'>
                                 <button type='button' className='green-button inner__page__empty__btn'>
                                     Вернуться назад
-                                    <img alt='arrow' src='react-sneakers/img/arrow.png' />
+                                    <img alt='arrow' src='/react-sneakers/img/arrow.png' />
                                 </button>
                             </Link>
                         </div>
