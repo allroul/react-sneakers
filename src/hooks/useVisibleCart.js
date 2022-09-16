@@ -1,8 +1,8 @@
 import { useLayoutEffect, useRef } from 'react'
 import { useDispatch } from 'react-redux'
-import { changeCartStatus } from '../store/cartStatusSlice'
+import { changeCartStatus } from '../store/cartSlice'
 
-const useVisibleCart = cartStatus => {
+const useVisibleCart = () => {
   const dispatch = useDispatch()
   const cartBodyRef = useRef()
   const onCloseCart = ({ target }) => {
@@ -12,15 +12,17 @@ const useVisibleCart = cartStatus => {
   useLayoutEffect(() => {
     const bodySelector = document.body
     const lockPaddingValue = window.innerWidth - bodySelector.offsetWidth
-    
-    if(cartStatus) {
-      bodySelector.style.overflow = 'hidden'
-      bodySelector.style.paddingRight = `${lockPaddingValue}px`
-    } else {
-      bodySelector.style.overflow = null
-      bodySelector.style.paddingRight = null
+    const initialBodyOverflowStyle = window.getComputedStyle(bodySelector).overflow
+    const initialBodyPaddingRightStyle = window.getComputedStyle(bodySelector).paddingRight
+
+    bodySelector.style.overflow = 'hidden'
+    bodySelector.style.paddingRight = `${lockPaddingValue}px`
+
+    return () => {
+      bodySelector.style.overflow = initialBodyOverflowStyle
+      bodySelector.style.paddingRight = initialBodyPaddingRightStyle
     }
-  }, [cartStatus])
+  }, [])
 
   return {
     onCloseCart,

@@ -1,27 +1,20 @@
-import '../main.scss';
-import { useDispatch } from 'react-redux'
-import { removeFromCart } from '../store/cartItemsSlice';
+import '../main.scss'
 
 const CartItem = props => {
-    const dispatch = useDispatch();
-
-    const deleteItem = id => {
-        dispatch(removeFromCart({id}))
-    }
     return (
         <li className='cart__item'>
-            <img className='cart__item__img' alt='cart item img' src={props.img} />
+            <img className='cart__item__img' alt='cart item img' src='img/sneakers/1.jpg' />
             <div className='cart__item__info'>
                 <h2 className='cart__item__title'>
-                    {props.name}
+                    Мужские Кроссовки Nike Air Max 270
                 </h2>
                 <span className='cart__item__price'>
-                   {props.price}
+                    169$
                 </span>
             </div>
-            <button type='button' className='cart__item__delete' onClick={() => deleteItem(props.id)}>
+            <a href='#' className='cart__item__delete'>
                 <img alt='delete item' src="img/delete.png" />
-            </button>
+            </a>
         </li>
     )
 }

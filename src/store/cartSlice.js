@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-const cartStatusSlice = createSlice({
-  name: 'cartStatusSlice',
+const cartSlice = createSlice({
+  name: 'cartSlice',
   initialState: {
     status: false,
   },
@@ -12,6 +12,6 @@ const cartStatusSlice = createSlice({
   },
 })
 
-export const { changeCartStatus } = cartStatusSlice.actions
+export const { changeCartStatus } = cartSlice.actions
 
-export default cartStatusSlice.reducer
+export default cartSlice.reducer

@@ -18,7 +18,7 @@ const sneakersSlice = createSlice({
       },
       {
         id: 3,
-        name: 'Мужские Кроссовки Nike Air Max 830',
+        name: 'Мужские Кроссовки Nike Air Max 270',
         price: 179,
         img: 'img/sneakers/3.jpg',
       },
