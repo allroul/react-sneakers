@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import '../main.scss'
 
 const MainSlider = () => {
@@ -33,24 +34,24 @@ const MainSlider = () => {
             <div className='slider__window'>
                 <div className='slider__items' style={{transform: `translateX(${pageOffset}px)`}}>
                     <div className='slider__item slider__item_green active'>
-                        <a href='#main__title' className='green-button slider__button' >
+                        <Link to='/' className='green-button slider__button' >
                             explore
-                        </a>
+                        </Link>
                     </div>
                     <div className='slider__item slider__item_blue'>
-                        <a href='#main__title' className='slider__button'>
+                        <Link href='/' className='slider__button'>
                             explore
-                        </a>
+                        </Link>
                     </div>
                     <div className='slider__item slider__item_red'>
-                        <a href='#main__title' className='slider__button'>
+                        <Link href='/' className='slider__button'>
                             explore
-                        </a>
+                        </Link>
                     </div>
                     <div className='slider__item slider__item_brown'>
-                        <a href='#main__title' className='slider__button'>
+                        <Link href='/' className='slider__button'>
                             explore
-                        </a>
+                        </Link>
                     </div>
                 </div>                
             </div>   
