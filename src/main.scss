@@ -14,10 +14,6 @@ h4 {
   padding: 0;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   font-size: 14px;
   font-family: "Inter", sans-serif;
@@ -50,6 +46,17 @@ li {
 
 .layout {
   background-color: #e7f6ff;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+  box-sizing: border-box;
+=======
+>>>>>>> parent of 9896124 (build created)
+=======
+>>>>>>> parent of 9896124 (build created)
+=======
+>>>>>>> parent of 9896124 (build created)
   padding: 80px 55px;
   min-height: calc(100vh - 169px);
 
@@ -64,6 +71,9 @@ li {
   @media (max-width: 576px) {
     padding: 30px 20px;
   }
+=======
+  padding: 85px;
+>>>>>>> parent of 00aa1fd (final changes)
 }
 
 .main-content {
@@ -72,57 +82,23 @@ li {
   margin: 0 auto;
   background-color: #fff;
   border-radius: 20px;
-
-  @media (max-width: 768px) {
-    display: flex;
-    flex-direction: column;
-    min-height: inherit;
-  }
 }
 
 .header {
   padding: 45px 60px;
   border-bottom: 2px solid #eaeaea;
 
-  @media (max-width: 992px) {
-    padding: 45px;
-  }
-
-  @media (max-width: 768px) {
-    padding: 40px 30px;
-  }
-
-  @media (max-width: 576px) {
-    padding: 35px 20px;
-  }
-
   &__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    @media (max-width: 576px) {
-      flex-direction: column;
-    }
-
     &__logo {
       display: flex;
       align-items: center;
 
-      @media (max-width: 576px) {
-        margin-bottom: 20px;
-      }
-
       & img {
         margin-right: 16px;
-
-        @media (max-width: 768px) {
-          margin-right: 0;
-        }
-
-        @media (max-width: 576px) {
-          margin-right: 15px;
-        }
       }
     }
 
@@ -131,25 +107,12 @@ li {
       font-size: 14px;
       font-weight: 400;
 
-      @media (max-width: 768px) {
-        display: none;
-      }
-
-      @media (max-width: 576px) {
-        display: block;
-        font-size: 12px;
-      }
-
       & span {
         text-transform: uppercase;
         color: #000;
         display: block;
         font-size: 20px;
         font-weight: 700;
-
-        @media (max-width: 576px) {
-          font-size: 16px;
-        }
       }
     }
 
@@ -192,15 +155,7 @@ li {
         }
 
         svg:hover path {
-          fill: #FF5151;
-        }
-      }
-
-      .nav-item-active {
-        .header__info__favorites {
-          svg path {
-            fill: #FF5151;
-          }
+          fill: #ff8585;
         }
       }
 
@@ -217,253 +172,123 @@ li {
           fill: #000aff;
         }
       }
-      .nav-item-active {
-        .header__info__user {
-          svg path {
-            fill: #000aff;
-          }
-        }
-      }
-    }
-  }
-}
-
-.sneakers-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  margin-top: 40px;
-
-  @media (max-width: 992px) {
-    gap: 50px;
-  }
-
-  @media (max-width: 768px) {
-    gap: 50px 0;
-  }
-
-  .sneakers-item {
-    box-sizing: border-box;
-    width: calc(100%/4 - 30px);
-    position: relative;
-    padding: 20px 28px 32px;
-    border-radius: 40px;
-    border: 1.5px solid #f3f3f3;
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-
-    @media (max-width: 1200px) {
-      width: calc(100%/3 - 27px);
-    }
-
-    @media (max-width: 992px) {
-      width: calc(100%/2 - 25px);
-    }
-
-    @media (max-width: 768px) {
-      width: 100%;
-    }
-
-    @media (max-width: 576px) {
-      padding: 20px 25px 25px;
-    }
-
-    &:hover {
-      transform: translateY(-10px);
-      box-shadow: 0px 14px 30px 0px #0000000d;
-    }
-
-    &__favorites {
-      position: absolute;
-      top: 30px;
-      left: 30px;
-      width: 32px;
-      height: 32px;
-    }
-
-    .favorite-wrapper {
-      position: relative;
-      width: 32px;
-      height: 32px;
-
-      @media (max-width: 992px) {
-        width: 45px;
-        height: 45px;
-      }
-
-      @media (max-width: 768px) {
-        width: 60px;
-        height: 60px;
-      }
-
-      @media (max-width: 576px) {
-        width: 40px;
-        height: 40px;
-      }
-
-      &.added .favorite-added {
-        opacity: 1;
-      }
-
-      &.added .favorite-unadded {
-        opacity: 0;
-      }
-
-      .favorite-added {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-      }
-
-      .favorite-unadded {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        transition: opacity 0.3s ease;
-      }
-    }
-
-    .sneakers-item__img {
-      width: 100%;
-      margin-bottom: 14px;
-      display: block;
-    }
-
-    .sneakers-item__title {
-      font-size: 14px;
-      font-weight: 400;
-      margin-bottom: 14px;
-      max-width: 150px;
-
-      @media (max-width: 768px) {
-        max-width: 82%;
-        font-size: 22px;
-      }
-
-      @media (max-width: 576px) {
-        max-width: 100%;
-        font-size: 18px;
-      }
-    }
-
-    .sneakers-item__info {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      .sneakers-item__price {
-        text-transform: uppercase;
-        font-weight: 500;
-        color: #bdbdbd;
-
-        @media (max-width: 768px) {
-          font-size: 20px;
-        }
-
-        @media (max-width: 576px) {
-          font-size: 16px;
-        }
-
-        span {
-          display: block;
-          color: #000;
-          font-weight: 700;
-          margin-top: 2px;
-
-          @media (max-width: 768px) {
-            font-size: 24px;
-          }
-
-          @media (max-width: 576px) {
-            font-size: 20px;
-          }
-        }
-      }
-
-      .sneakers-item__order {
-        outline: none;
-        border: none;
-        cursor: pointer;
-      }
-
-      .add-to-cart-wrapper {
-        position: relative;
-        width: 32px;
-        height: 32px;
-
-        @media (max-width: 992px) {
-          width: 45px;
-          height: 45px;
-        }
-
-        @media (max-width: 768px) {
-          width: 60px;
-          height: 60px;
-        }
-
-        @media (max-width: 576px) {
-          width: 40px;
-          height: 40px;
-        }
-
-        &.added .add-to-cart-added {
-          opacity: 1;
-        }
-
-        &.added .add-to-cart-unadded {
-          opacity: 0;
-        }
-
-        .add-to-cart-added {
-          width: 100%;
-          height: 100%;
-          position: absolute;
-          right: 0;
-          bottom: 0;
-          opacity: 0;
-          transition: opacity 0.4s ease;
-        }
-
-        .add-to-cart-unadded {
-          width: 100%;
-          height: 100%;
-          transition: opacity 0.4s ease;
-        }
-      }
     }
   }
 }
 
 .main {
-  padding: 50px 59px;
-  
-  @media (max-width: 992px) {
-    padding: 45px;
-  }
-
-  @media (max-width: 768px) {
-    padding: 40px 30px
-  }
-
-  @media (max-width: 576px) {
-    padding: 35px 20px;
-  }
+  padding: 45px 60px;
 
   &__title {
     font-size: 32px;
+  }
 
-    @media (max-width: 768px) {
-      font-size: 40px;
-      margin-bottom: 25px;
-    }
+  .sneakers-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 38px;
+    margin-top: 40px;
 
-    @media (max-width: 576px) {
-      font-size: 31px;
+    .sneakers-item {
+      width: 149px;
+      position: relative;
+      padding: 20px 28px 32px;
+      border-radius: 40px;
+      border: 1.5px solid #f3f3f3;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+
+      &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0px 14px 30px 0px #0000000d;
+      }
+
+      &__favorites {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        width: 32px;
+        height: 32px;
+      }
+
+      .favorite-wrapper {
+        .favorite-active {
+          position: absolute;
+          top: 0;
+          left: 0;
+          opacity: 0;
+          transition: opacity 0.3s ease;
+        }
+
+        .favorite-unactive {
+          position: absolute;
+          top: 0;
+          left: 0;
+          transition: opacity 0.3s ease;
+        }
+      }
+
+      .sneakers-item__img {
+        width: 100%;
+        margin-bottom: 14px;
+        display: block;
+      }
+
+      .sneakers-item__title {
+        font-size: 14px;
+        font-weight: 400;
+        margin-bottom: 14px;
+      }
+
+      .sneakers-item__info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .sneakers-item__price {
+          text-transform: uppercase;
+          font-weight: 500;
+          color: #bdbdbd;
+
+          span {
+            display: block;
+            color: #000;
+            font-weight: 700;
+            margin-top: 2px;
+          }
+        }
+
+        .sneakers-item__order {
+          outline: none;
+          border: none;
+          cursor: pointer;
+        }
+
+        .add-to-cart-wrapper {
+          position: relative;
+          width: 32px;
+          height: 32px;
+
+          &.added .add-to-cart-added {
+            opacity: 1;
+          }
+
+          &.added .add-to-cart-unadded {
+            opacity: 0;
+          }
+
+          .add-to-cart-added {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+          }
+
+          .add-to-cart-unadded {
+            transition: opacity 0.4s ease;
+          }
+        }
+      }
     }
   }
 
@@ -472,21 +297,12 @@ li {
     justify-content: space-between;
     align-items: center;
 
-    @media (max-width: 768px) {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-
     .main__title__search {
       max-width: 250px;
       width: 100%;
       position: relative;
 
-      @media (max-width: 768px) {
-        max-width: 100%;
-      }
-
-      .search-img {
+      & img {
         position: absolute;
         top: 0;
         bottom: 0;
@@ -494,40 +310,12 @@ li {
         left: 18px;
       }
 
-      .clear-search {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        margin: auto 0;
-        display: block;
-        right: 10px;        
-        filter: grayscale(1);
-        scale: 0.8;
-        cursor: pointer;
-      }
-
       & input {
-        padding: 15px 46px;
+        padding: 15px 18px 15px 46px;
         border-radius: 10px;
         border: 2px solid #f3f3f3;
-        color: #000000;
+        color: #c4c4c4;
         outline: none;
-        width: 100%;
-        box-sizing: border-box;
-
-        @media (max-width: 768px) {
-          padding: 20px 46px;
-          font-size: 18px;
-        }
-
-        @media (max-width: 576px) {
-          padding: 12px 46px;
-          font-size: 15px;
-        }
-
-        &::placeholder {
-          color: #c4c4c4;
-        }
       }
     }
   }
@@ -540,7 +328,7 @@ li {
   background-color: rgba(#000, 80%);
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 1;
   opacity: 0;
   visibility: hidden;
   transition: all 450ms linear;
@@ -551,12 +339,10 @@ li {
 
   &__content {
     width: 100%;
-    max-width: 330px;
+    max-width: 325px;
     max-height: calc(100vh - 60px);
     padding: 30px;
     flex-direction: column;
-    overflow: auto;
-    -ms-overflow-style: none;
     display: flex;
     transform: translateX(100%);
     background-color: #fff;
@@ -566,14 +352,6 @@ li {
     &.entered { transform: translateX(0); }
     &.exiting { transform: translateX(100%); }
     &.exited { transform: translateX(100%); }
-
-    &::-webkit-scrollbar {
-      width: 0;
-    }
-
-    @media (max-width: 576px) {
-      padding: 30px 20px;
-    }
   }
 
   &__body {
@@ -585,13 +363,6 @@ li {
   &__title {
     font-size: 24px;
     font-weight: 700;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    & img {
-      cursor: pointer;
-    }
   }
 
   &__list {
@@ -613,10 +384,6 @@ li {
     border: 2px solid #f3f3f3;
     padding: 20px;
 
-    @media (max-width: 576px) {
-      padding: 15px;
-    }
-
     &:not(:last-child) {
       margin-bottom: 20px;
     }
@@ -637,10 +404,6 @@ li {
       font-size: 14px;
       font-weight: 400;
       margin-bottom: 8px;
-
-      @media (max-width: 576px) {
-        font-size: 12px;
-      }
     }
 
     &__price {
@@ -650,13 +413,6 @@ li {
     &__delete {
       filter: grayscale(100%);
       transition: filter 0.3s ease;
-
-      @media (max-width: 576px) {
-        & img {
-          width: 25px;
-          height: 25px;
-        }
-      }
 
       &:hover {
         filter: grayscale(0);
@@ -699,9 +455,32 @@ li {
       &-number {
         font-weight: 600;
       }
-    }   
-    
+    }
+
     &__submit {
+      width: 100%;
+      border-radius: 18px;
+      background-color: #7fd217;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 18px;
+      color: #fff;
+      border: none;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      position: relative;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #65a811;
+      }
+
+      &:active {
+        background-color: darken($color: #65a811, $amount: 10);
+      }
+
       &:hover img {
         transform: translateX(15px);
       }
@@ -716,489 +495,4 @@ li {
       }
     }
   }
-
-  &__empty {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex: 1;
-    max-width: 270px;
-    width: 100%;
-    margin: 0 auto;
-
-    &__img {
-      margin-bottom: 21px;
-      display: block;
-    }
-
-    &__title {
-      font-size: 22px;
-      font-weight: 600;
-      margin-bottom: 10px;
-    }
-    
-    &__text {
-      color: #999;
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    &__button {
-      & img {
-        position: absolute;
-        transform: rotate(180deg);
-        left: 30px;
-        top: 0;
-        bottom: 0;
-        margin: auto 0;
-        transition: transform 0.3s ease;
-      }
-
-      &:hover img {
-        transform: translateX(-15px) rotate(180deg);
-      }
-    }
-  }
-}
-
-.green-button {
-  width: 100%;
-  border-radius: 18px;
-  background-color: #7fd217;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 18px;
-  color: #fff;
-  border: none;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  position: relative;
-  transition: background-color 0.3s ease;
-
-  &:hover {
-    background-color: #65a811;
-  }
-
-  &:active {
-    background-color: darken($color: #65a811, $amount: 10);
-  }            
-}
-
-.inner__page {
-  padding: 45px 60px;
-
-  @media (max-width: 992px) {
-    padding: 45px;
-  }
-
-  @media (max-width: 768px) {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 40px 30px;
-  }
-
-  @media (max-width: 576px) {
-    padding: 35px 20px;
-  }
-
-  .main__title {
-    display: flex;
-    align-items: center;
-
-    & img {
-      margin-right: 20px;
-      display: flex;
-      cursor: pointer;
-      filter: brightness(1);
-      width: 35px;
-      height: 35px;
-      border-radius: 8px;
-      transition: filter .3s ease;
-    }
-
-    & img:hover {
-      filter: brightness(0.8);
-    }
-  }
-
-  &__empty {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 50px 0;
-
-    &__face {
-      width: 70px;
-      height: 70px;
-      display: block;
-      margin-bottom: 20px;
-    }
-
-    & h3 {
-      font-size: 24px;
-      font-weight: 600;
-      margin-bottom: 11px;
-
-      @media (max-width: 576px) {
-        font-size: 20px;
-      }
-    }
-
-    & p {
-      color: #999;
-      margin-bottom: 50px;
-      font-size: 16px;
-      text-align: center;
-
-      @media (max-width: 576px) {
-        font-size: 14px;
-      }
-    }
-
-    &__btn {
-      width: 225px;
-      padding: 18px 18px 18px 60px;
-
-      & img {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        margin: auto 0;
-        transform: rotate(180deg);
-        left: 33px;
-        transition: transform .3s ease;
-      }
-
-      &:hover img {
-        transform: translateX(-12px) rotate(180deg);
-      }
-    }    
-  }
-}
-
-.not-found-page {
-  padding: 60px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-
-  h2 {
-    font-size: 68px;
-    margin-bottom: 40px;
-  }
-
-  p {
-    font-size: 20px;
-    margin-bottom: 40px;
-  }
-
-  a {
-    max-width: 250px;
-    width: 100%;
-  }
-}
-
-.slider {
-  max-width: 960px;
-  height: 300px;
-  margin: 0 auto 40px;
-  position: relative;
-
-  @media (max-width: 1200px) {
-    height: 265px;
-    max-width: 765px;
-  }
-
-  @media (max-width: 992px) {
-    max-width: 590px;
-  }
-
-  @media (max-width: 768px) {
-    max-width: 457px;
-  }
-
-  @media (max-width: 576px) {
-    max-width: 250px;
-    height: 230px;
-  }
-
-  &__arrow-prev {
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    background-color: #fff;
-    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.15);
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    margin: auto 0;
-    left: -17px;
-    z-index: 1;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform .3s ease;
-
-    @media (max-width: 768px) {
-      width: 28px;
-      height: 28px;
-    }
-
-    &:hover {
-      transform: scale(120%);
-    }
-
-    &::before {
-      content: '';
-      display: block;
-      border: solid black;
-      border-width: 0 2px 2px 0;
-      display: inline-block;
-      padding: 4px;
-      margin-left: 5px;
-      transform: rotate(135deg);
-      -webkit-transform: rotate(135deg);
-
-      @media (max-width: 768px) {
-        padding: 3px;
-        border-width: 0 1.5px 1.5px 0;
-      }
-    }
-  }
-
-  &__arrow-next {
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    background-color: #fff;
-    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.15);
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    margin: auto 0;
-    right: -17px;
-    z-index: 1;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform .3s ease;
-
-    @media (max-width: 768px) {
-      width: 28px;
-      height: 28px;
-    }
-
-    &:hover {
-      transform: scale(120%);
-    }
-
-    &::before {
-      content: '';
-      display: block;
-      border: solid black;
-      border-width: 0 2px 2px 0;
-      display: inline-block;
-      padding: 4px;
-      margin-right: 5px;
-      transform: rotate(-45deg);
-      -webkit-transform: rotate(-45deg);
-
-      @media (max-width: 768px) {
-        padding: 3px;
-        border-width: 0 1.5px 1.5px 0;
-      }
-    }
-  } 
-
-  &__window {
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-  }
-
-  &__items {
-    display: flex;
-    height: 100%;
-    transition: transform .5s ease-in-out;
-  }
-
-  &__item {    
-    background-size: cover;
-    min-width: 100%;
-    max-width: 100%;
-    height: 100%;
-    position: relative;
-    border-radius: 20px;
-  } 
-
-  &__button {
-    width: 180px;
-    height: 50px;
-    border-radius: 110px;   
-    color: #fff;
-    text-transform: uppercase;
-    text-align: center;
-    font-weight: 700;
-    position: absolute;
-    left: 60px;
-    bottom: 60px;
-    font-size: 16px;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;    
-    transition: background-color .3s ease;
-
-    @media (max-width: 1200px) {
-      width: 160px;
-      height: 40px;
-      font-size: 14px;
-      left: 50px;
-      bottom: 50px;
-    }
-
-    @media (max-width: 992px) {
-      left: 45px;
-    }
-
-    @media (max-width: 768px) {
-      left: 25px;
-    }
-
-    @media (max-width: 576px) {
-      left: 20px;
-      bottom: 55px;
-      width: 110px;
-      height: 30px;
-      font-size: 11px;
-    }
-  }
-
-  &__item_green {
-    background-image: url('../public/img/slider/1.png');
-
-    @media (max-width: 1200px) {
-      background-image: url('../public/img/slider/1-992.png');
-    }
-
-    @media (max-width: 992px) {
-      background-image: url('../public/img/slider/1-768.png');
-    }
-
-    @media (max-width: 768px) {
-      background-image: url('../public/img/slider/1-576.png');
-    }
-
-    @media (max-width: 576px) {
-      background-image: url('../public/img/slider/1-320.png');
-    }
-    
-  }
-
-  &__item_blue {
-    background-image: url('../public/img/slider/2.png');
-
-    @media (max-width: 1200px) {
-      background-image: url('../public/img/slider/2-992.png');
-    }
-
-    @media (max-width: 992px) {
-      background-image: url('../public/img/slider/2-768.png');
-    }
-
-    @media (max-width: 768px) {
-      background-image: url('../public/img/slider/2-576.png');
-    }
-
-    @media (max-width: 576px) {
-      background-image: url('../public/img/slider/2-320.png');
-    }
-    
-
-    .slider__button {
-      background-color: #01A1B9;
-
-      &:hover {
-        background-color: darken($color: #01A1B9, $amount: 10);
-      }
-
-      &:active {
-        background-color: darken($color: #01A1B9, $amount: 20);
-      }
-    }
-  }
-
-  &__item_red {
-    background-image: url('../public/img/slider/3.png');
-
-    @media (max-width: 1200px) {
-      background-image: url('../public/img/slider/3-992.png');
-    }
-
-    @media (max-width: 992px) {
-      background-image: url('../public/img/slider/3-768.png');
-    }
-
-    @media (max-width: 768px) {
-      background-image: url('../public/img/slider/3-576.png');
-    }
-
-    @media (max-width: 576px) {
-      background-image: url('../public/img/slider/3-320.png');
-    }
-
-    .slider__button {
-      background-color: #932200;
-
-      &:hover {
-        background-color: darken($color: #932200, $amount: 5);
-      }
-
-      &:active {
-        background-color: darken($color: #932200, $amount: 10);
-      }
-    }
-  }
-
-  &__item_brown {
-    background-image: url('../public/img/slider/4.png');
-
-    @media (max-width: 1200px) {
-      background-image: url('../public/img/slider/4-992.png');
-    }
-
-    @media (max-width: 992px) {
-      background-image: url('../public/img/slider/4-768.png');
-    }
-
-    @media (max-width: 768px) {
-      background-image: url('../public/img/slider/4-576.png');
-    }
-
-    @media (max-width: 576px) {
-      background-image: url('../public/img/slider/4-320.png');
-    }
-
-    .slider__button {
-      background-color: #B38D64;
-
-      &:hover {
-        background-color: darken($color: #B38D64, $amount: 10);
-      }
-
-      &:active {
-        background-color: darken($color: #B38D64, $amount: 15);
-      }
-    }
-  }
-
-  
 }
