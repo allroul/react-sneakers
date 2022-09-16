@@ -25,37 +25,7 @@ const MainSlider = () => {
 
     const nextSlide = () => {
         setPageOffset(Math.max(pageOffset - sliderWidth, maxOffset))
-    }
-
-    // const autoSliding = () => {
-    //     if(pageOffset !== maxOffset) {            
-    //         setInterval(() => {
-    //             if(pageOffset !== maxOffset) {
-    //                 setPageOffset(pageOffset - sliderWidth)
-    //             } else {
-    //                 autoSliding()
-    //             }
-               
-    //         }, 2000)
-    //     } else if(pageOffset <= 0){
-    //         setInterval(() => {
-    //             if(pageOffset <= 0) {
-    //                 setPageOffset(pageOffset + sliderWidth)
-    //             } else {
-    //                 autoSliding()
-    //             }
-               
-    //         }, 2000)
-    //     }
-        
-    // }
-
-    // useEffect(() => {
-    //     autoSliding()
-    // }, [pageOffset])
-    
-
-    
+    }    
 
     return (
         <div className='slider'>

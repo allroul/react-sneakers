@@ -9,7 +9,6 @@ import NotFoundPage from './components/NotFoundPage'
 import Orders from './components/Orders'
 
 const App = () => (
-    
     <div className='layout'>
       <Cart />
       <div className='main-content'>
@@ -23,7 +22,6 @@ const App = () => (
         
       </div>
     </div>
-  
 )
 
 export default App

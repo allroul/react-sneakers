@@ -73,8 +73,8 @@ const SneakersItem = props => {
             {props.isOrdered ? null : 
                 <button type='button' className="sneakers-item__favorites" onClick={() => {addedToFavorites ? removeItemFromFavorites(id) : addItemToFavorites(props)}}>
                     <div className={`favorite-wrapper ${addedToFavorites || props.isFavorite ? 'added' : ''}`}>
-                        <img alt='favorite-unactive' className='favorite-unadded' src='img/favorite-unactive.jpg' />
-                        <img alt='favorite-active' className='favorite-added' src='img/favorite-active.jpg' />
+                        <img alt='favorite-unactive' className='favorite-unadded' src='react-sneakers/img/favorite-unactive.jpg' />
+                        <img alt='favorite-active' className='favorite-added' src='react-sneakers/img/favorite-active.jpg' />
                     </div>
                 </button>
             }
@@ -91,8 +91,8 @@ const SneakersItem = props => {
                 {props.isOrdered ? null : 
                     <button type='button' className='sneakers-item__order' onClick={() => {addedToCart ? removeItemFromCart(id) : addItemToCart(props)}} >
                         <div className={`add-to-cart-wrapper ${cartContainsObj() == true && addedToCart == true ? 'added' : ''}`}>
-                            <img src='img/add-to-cart.jpg' alt='add to cart' className='add-to-cart-unadded'/>
-                            <img src='img/added-to-cart.jpg' alt='added to cart' className='add-to-cart-added'/>
+                            <img src='react-sneakers/img/add-to-cart.jpg' alt='add to cart' className='add-to-cart-unadded'/>
+                            <img src='react-sneakers/img/added-to-cart.jpg' alt='added to cart' className='add-to-cart-added'/>
                         </div>                    
                     </button>
                 }
