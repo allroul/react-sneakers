@@ -4,11 +4,12 @@ import Main from './components/Main'
 import Cart from './components/Cart'
 import Favorites from './components/Favorites'
 import './main.scss'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, HashRouter } from 'react-router-dom'
 import NotFoundPage from './components/NotFoundPage'
 import Orders from './components/Orders'
 
 const App = () => (
+  <HashRouter>
     <div className='layout'>
       <Cart />
       <div className='main-content'>
@@ -22,6 +23,7 @@ const App = () => (
         
       </div>
     </div>
+  </HashRouter>
 )
 
 export default App

@@ -42,7 +42,7 @@ const Header = props => {
                 <div className='header__wrapper'>
                     <Link to='/'>
                         <div className='header__wrapper__logo'>
-                            <img width={40} height={40} src='/react-sneakers/img/logo.svg' />
+                            <img width={40} height={40} src='/react-sneakers/img/logo.svg' alt='logo' />
                             <h1 className='header__wrapper__title'>
                                 <span>
                                     React Sneakers
