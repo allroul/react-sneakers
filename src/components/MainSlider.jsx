@@ -39,17 +39,17 @@ const MainSlider = () => {
                         </Link>
                     </div>
                     <div className='slider__item slider__item_blue'>
-                        <Link href='/' className='slider__button'>
+                        <Link to='/' className='slider__button'>
                             explore
                         </Link>
                     </div>
                     <div className='slider__item slider__item_red'>
-                        <Link href='/' className='slider__button'>
+                        <Link to='/' className='slider__button'>
                             explore
                         </Link>
                     </div>
                     <div className='slider__item slider__item_brown'>
-                        <Link href='/' className='slider__button'>
+                        <Link to='/' className='slider__button'>
                             explore
                         </Link>
                     </div>
