@@ -72,9 +72,17 @@ const SneakersItem = props => {
         <li className="sneakers-item">
             {props.isOrdered ? null : 
                 <button type='button' className="sneakers-item__favorites" onClick={() => {addedToFavorites ? removeItemFromFavorites(id) : addItemToFavorites(props)}}>
-                    <div className={`favorite-wrapper ${addedToFavorites || props.isFavorite ? 'added' : ''}`}>
-                        <img alt='favorite-unactive' className='favorite-unadded' src='/react-sneakers/img/favorite-unactive.jpg' />
-                        <img alt='favorite-active' className='favorite-added' src='/react-sneakers/img/favorite-active.jpg' />
+                    <div className={`favorite-wrapper ${addedToFavorites || props.isFavorite ? 'added' : ''}`}>  
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.5" y="0.5" width="31" height="31" rx="6.5" fill="white" stroke="#F0F0F0"/>
+                            <path d="M13.125 11C11.3994 11 10 12.385 10 14.0937C10 15.4731 10.5469 18.7469 15.93 22.0563C16.0264 22.1149 16.1371 22.146 16.25 22.146C16.3629 22.146 16.4736 22.1149 16.57 22.0563C21.9531 18.7469 22.5 15.4731 22.5 14.0937C22.5 12.385 21.1006 11 19.375 11C17.6494 11 16.25 12.875 16.25 12.875C16.25 12.875 14.8506 11 13.125 11Z" stroke="#E1E1E1" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round"/>
+                            <defs>
+                                <linearGradient id="paint0_linear_60_999" x1="16" y1="9" x2="16" y2="23" gradientUnits="userSpaceOnUse">
+                                    <stop stopColor="#FFB0B0"/>
+                                    <stop offset="1" stopColor="#FF4343"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
                     </div>
                 </button>
             }
@@ -85,8 +93,8 @@ const SneakersItem = props => {
             </h2>
             <div className='sneakers-item__info'>
                 <h3 className='sneakers-item__price'>
-                    Цена:
-                    <span>{props.price}$</span>
+                    Price:
+                    <span>$ {props.price}</span>
                 </h3>
                 {props.isOrdered ? null : 
                     <button type='button' className='sneakers-item__order' onClick={() => {addedToCart ? removeItemFromCart(id) : addItemToCart(props)}} >

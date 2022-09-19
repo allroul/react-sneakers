@@ -23,7 +23,7 @@ const Favorites = () => {
                             <Link to='/'>
                                 <img src="/react-sneakers/img/arrow-back.jpg" className="inner__page__back-btn" alt="arrow back" />
                             </Link>                    
-                            Мои закладки
+                            My favorites
                         </h2>
                         <ul className="sneakers-list">
                             {favoriteItems}
@@ -33,14 +33,14 @@ const Favorites = () => {
                         <div className='inner__page__empty'>
                             <img src='/react-sneakers/img/favorites-empty.png' alt='upset face'  className='inner__page__empty__face'/>
                             <h3>
-                                Закладок нет :(
+                               No favorites :(
                             </h3>
                             <p>
-                                Вы ничего не добавляли в закладки
+                               You haven't added anything yet
                             </p>
                             <Link to='/'>
                                 <button type='button' className='green-button inner__page__empty__btn'>
-                                    Вернуться назад
+                                    Go back
                                     <img alt='arrow' src='/react-sneakers/img/arrow.png' />
                                 </button>
                             </Link>                            

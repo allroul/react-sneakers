@@ -28,7 +28,7 @@ const Orders = () => {
                             <Link to='/'>
                                 <img src="/react-sneakers/img/arrow-back.jpg" className="inner__page__back-btn" alt="arrow back" />
                             </Link>                    
-                            Мои заказы
+                            My orders
                         </h2>
                         <ul className="sneakers-list">
                             {orderedItems}
@@ -36,17 +36,17 @@ const Orders = () => {
                     </> 
                     ) : (
                         <div className='inner__page__empty'>
-                            <img alt='orders empty' className='inner__page__empty__face' src='/react-sneakers/img/orders-empty.jpg' />
+                            <img alt='orders empty' className='inner__page__empty__face' src='/react-sneakers/img/orders-empty.png' />
                             <h3>
-                                У вас нет заказов :(
+                                No orders :(
                             </h3>
                             <p>
-                                Вы нищеброд?<br /> 
-                                Оформите хотя бы один заказ.
+                               Are you broke?<br /> 
+                               Order at least something
                             </p>
                             <Link to='/'>
                                 <button type='button' className='green-button inner__page__empty__btn'>
-                                    Вернуться назад
+                                    Go back
                                     <img alt='arrow' src='/react-sneakers/img/arrow.png' />
                                 </button>
                             </Link>

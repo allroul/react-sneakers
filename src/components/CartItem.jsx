@@ -16,7 +16,7 @@ const CartItem = props => {
                     {props.name}
                 </h2>
                 <span className='cart__item__price'>
-                   {props.price}
+                   {'$ ' + props.price}
                 </span>
             </div>
             <button type='button' className='cart__item__delete' onClick={() => deleteItem(props.id)}>

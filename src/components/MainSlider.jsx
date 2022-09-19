@@ -1,8 +1,7 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 import '../main.scss'
 
-const MainSlider = () => {
+const MainSlider = mainTitle => {
     const [pageOffset, setPageOffset] = useState(0);
     let sliderWidth;
     if(window.innerWidth > 1200) {
@@ -26,7 +25,9 @@ const MainSlider = () => {
 
     const nextSlide = () => {
         setPageOffset(Math.max(pageOffset - sliderWidth, maxOffset))
-    }    
+    }        
+
+    const executeScroll = () => mainTitle.mainTitle.current.scrollIntoView()
 
     return (
         <div className='slider'>
@@ -34,24 +35,24 @@ const MainSlider = () => {
             <div className='slider__window'>
                 <div className='slider__items' style={{transform: `translateX(${pageOffset}px)`}}>
                     <div className='slider__item slider__item_green active'>
-                        <Link to='/' className='green-button slider__button' >
+                        <button onClick={executeScroll} className='green-button slider__button'>
                             explore
-                        </Link>
+                        </button>
                     </div>
                     <div className='slider__item slider__item_blue'>
-                        <Link to='/' className='slider__button'>
+                        <button onClick={executeScroll} className='slider__button'>
                             explore
-                        </Link>
+                        </button>
                     </div>
                     <div className='slider__item slider__item_red'>
-                        <Link to='/' className='slider__button'>
+                        <button onClick={executeScroll} className='slider__button'>
                             explore
-                        </Link>
+                        </button>
                     </div>
                     <div className='slider__item slider__item_brown'>
-                        <Link to='/' className='slider__button'>
+                        <button onClick={executeScroll} className='slider__button'>
                             explore
-                        </Link>
+                        </button>
                     </div>
                 </div>                
             </div>   
