@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/react-sneakers/static/css/main.c58f7604.css",
-    "main.js": "/react-sneakers/static/js/main.3638c798.js",
+    "main.css": "/react-sneakers/static/css/main.6ab85d37.css",
+    "main.js": "/react-sneakers/static/js/main.e36935e0.js",
+    "static/media/2-320.png": "/react-sneakers/static/media/2-320.d20869a579ffc2d9fb00.png",
+    "static/media/3-320.png": "/react-sneakers/static/media/3-320.3e2d06b6e00366687f26.png",
+    "static/media/4-320.png": "/react-sneakers/static/media/4-320.d1e26f435007ff451d89.png",
+    "static/media/1-320.png": "/react-sneakers/static/media/1-320.1c61ad136f64119e877e.png",
     "static/media/1.png": "/react-sneakers/static/media/1.1f211fe254350ccee796.png",
-    "static/media/3-320.png": "/react-sneakers/static/media/3-320.413f020ddc40ec2d9538.png",
-    "static/media/2-320.png": "/react-sneakers/static/media/2-320.1e4c07d3cee50528b8d6.png",
     "static/media/3.png": "/react-sneakers/static/media/3.261884df9c57f5a87b41.png",
     "static/media/1-992.png": "/react-sneakers/static/media/1-992.b3669dfd112048dc720d.png",
-    "static/media/4-320.png": "/react-sneakers/static/media/4-320.c9e682ba082d4a8aef3d.png",
-    "static/media/1-320.png": "/react-sneakers/static/media/1-320.8374c62abd014e34ffe5.png",
     "static/media/2.png": "/react-sneakers/static/media/2.b810ee5bd89a0203ca72.png",
     "static/media/3-992.png": "/react-sneakers/static/media/3-992.3c2bf207d7ad18ea32bc.png",
     "static/media/4.png": "/react-sneakers/static/media/4.4a0eed15aa68014a768b.png",
@@ -23,11 +23,11 @@
     "static/media/3-576.png": "/react-sneakers/static/media/3-576.42335cc6c670b2b6a4a6.png",
     "static/media/1-576.png": "/react-sneakers/static/media/1-576.5d4ca8a2b8eb03f5649e.png",
     "index.html": "/react-sneakers/index.html",
-    "main.c58f7604.css.map": "/react-sneakers/static/css/main.c58f7604.css.map",
-    "main.3638c798.js.map": "/react-sneakers/static/js/main.3638c798.js.map"
+    "main.6ab85d37.css.map": "/react-sneakers/static/css/main.6ab85d37.css.map",
+    "main.e36935e0.js.map": "/react-sneakers/static/js/main.e36935e0.js.map"
   },
   "entrypoints": [
-    "static/css/main.c58f7604.css",
-    "static/js/main.3638c798.js"
+    "static/css/main.6ab85d37.css",
+    "static/js/main.e36935e0.js"
   ]
 }
