@@ -14,7 +14,7 @@ const MainSlider = () => {
     } else if(window.innerWidth <= 768 && window.innerWidth >= 577) {
         sliderWidth = 457
     } else if(window.innerWidth <= 576) {
-        sliderWidth = 250
+        sliderWidth = 295
     }
     const slidesNumber = 4 - 1;
     const maxOffset = -(sliderWidth * slidesNumber);
